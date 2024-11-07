@@ -4,8 +4,6 @@ import { TbPlus } from "react-icons/tb";
 
 const MultipleFileUploader = ({ attachments, setAttachments }) => {
     const [selectedAttachments, setSelectedAttachments] = useState([]);
-
-    //! Handle selected and unselected attachment/attachments
     const handleSelectedAttachments = (id) => {
         const isAttachmentExist = selectedAttachments?.find((attachment) => attachment === id);
         if (!isAttachmentExist) {
@@ -16,7 +14,7 @@ const MultipleFileUploader = ({ attachments, setAttachments }) => {
         }
     };
 
-    //! Handle delete selected attachment/attachments
+
     const handleDeletedAttachments = () => {
         const remainingAttachments = attachments?.filter(
             (attachment) => !selectedAttachments.includes(attachment?.id)
@@ -25,7 +23,7 @@ const MultipleFileUploader = ({ attachments, setAttachments }) => {
         setSelectedAttachments([]);
     };
 
-    //! Add multiple attachments (PDF files)
+
     const handleAddAttachment = (e) => {
         e.preventDefault();
         const addAttachments = e.target.files;

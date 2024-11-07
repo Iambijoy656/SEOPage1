@@ -162,7 +162,7 @@ function App() {
 
 
                   <div className='flex gap-1 items-center '>
-                    <ImAttachment className='text-sm cursor-pointer' />
+                    <ImAttachment onClick={modalOpen} className='text-sm cursor-pointer' />
                     <p className='font-semibold text-gray-700 text-sm '>25</p>
 
                   </div>
@@ -235,7 +235,7 @@ function App() {
                     <p className='font-semibold text-gray-700 text-sm'>15+</p>
                   </div>
                   <div className='flex gap-1 items-center '>
-                    <ImAttachment className='text-sm cursor-pointer' />
+                    <ImAttachment onClick={modalOpen} className='text-sm cursor-pointer' />
                     <p className='font-semibold text-gray-700 text-sm '>25</p>
 
                   </div>
@@ -309,7 +309,7 @@ function App() {
                     <p className='font-semibold text-gray-700 text-sm'>15+</p>
                   </div>
                   <div className='flex gap-1 items-center '>
-                    <ImAttachment className='text-sm cursor-pointer' />
+                    <ImAttachment onClick={modalOpen} className='text-sm cursor-pointer' />
                     <p className='font-semibold text-gray-700 text-sm '>25</p>
 
                   </div>
@@ -379,7 +379,7 @@ function App() {
                     <p className='font-semibold text-gray-700 text-sm'>15+</p>
                   </div>
                   <div className='flex gap-1 items-center '>
-                    <ImAttachment className='text-sm cursor-pointer' />
+                    <ImAttachment onClick={modalOpen} className='text-sm cursor-pointer' />
                     <p className='font-semibold text-gray-700 text-sm '>25</p>
 
                   </div>
