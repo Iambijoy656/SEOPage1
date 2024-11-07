@@ -1,11 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import { FaCalendarAlt, FaRegComment, FaRegComments } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaCalendarAlt, FaRegComments } from 'react-icons/fa';
 import { FaCalendarDays } from 'react-icons/fa6';
 import { ImAttachment } from 'react-icons/im';
 import { TbBrandDatabricks } from "react-icons/tb";
+import Modal from './components/Modal';
 
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  console.log('isopen', isOpen);
 
   const incompData = [1, 2, 3, 4, 5, 4, 7, 75, 3, 2, 5, 9]
   const todoData = [1, 2, 3, 4, 5, 4, 4, 4, 4, 4, 7, 75, 3, 2, 5, 9]
@@ -24,6 +28,16 @@ function App() {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
+
+  const modalOpen = () => {
+
+    setIsOpen(!isOpen)
+
+  }
+
+
+
 
   return (
     <div className=' flex gap-7 mx-auto my-10 custom-scrollbar overflow-x-scroll max-w-[1240px]'>
@@ -77,7 +91,7 @@ function App() {
 
 
                   <div className='flex gap-1 items-center '>
-                    <ImAttachment className='text-sm cursor-pointer' />
+                    <ImAttachment onClick={modalOpen} className='text-sm cursor-pointer' />
                     <p className='font-semibold text-gray-700 text-sm '>25</p>
 
                   </div>
@@ -454,6 +468,16 @@ function App() {
         </div>
 
       </div>
+
+
+      {/* Modal */}
+      <Modal
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+
+      />
+
+
 
     </div>
 
