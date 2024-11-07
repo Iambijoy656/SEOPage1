@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    /* Set scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of scrollbar track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #0071be;
+    /* Color of the scrollbar thumb */
+    border-radius: 50%;
+    /* Fully rounded scrollbar thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    /* Set scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of scrollbar track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #0071be;
+    /* Color of the scrollbar thumb */
+    border-radius: 9999px;
+    /* High border-radius for rounded scrollbar */
+}
+
+.custom-scrollbar {
+    scrollbar-color: #0071be #f1f1f1;
+    scrollbar-width: thin;
+}
